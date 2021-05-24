@@ -11,9 +11,9 @@ ap.add_argument("-i", "--image", required=True,
 	help="path to input image")
 ap.add_argument("-y", "--yolo", required=True,
 	help="base path to YOLO directory")
-ap.add_argument("-c", "--confidence", type=float, default=0.5,
+ap.add_argument("-c", "--confidence", type=float, default=0.2,
 	help="minimum probability to filter weak detections")
-ap.add_argument("-t", "--threshold", type=float, default=0.3,
+ap.add_argument("-t", "--threshold", type=float, default=0.4,
 	help="threshold when applying non-maxima suppression")
 args = vars(ap.parse_args())
 

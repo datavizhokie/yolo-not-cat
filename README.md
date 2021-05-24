@@ -10,10 +10,10 @@ To execute the script using system arguments, use the following via CLI:
 
 Below is an initial image object detection using a photo of my dogs. The classifications are pretty spot on (no pun - by the way, their names are Moe and Bodie).
 
-<img src="https://github.com/datavizhokie/yolo-not-cat/blob/main/beagles_roof_class_result.png">
+<img src="https://github.com/datavizhokie/yolo-not-cat/blob/main/beagles_roof_class_result.png" width=50% height=50%>
 
 Let's take a look at another image, this one with more obvious objects.
 
-<img src="https://github.com/datavizhokie/yolo-not-cat/blob/main/counter_objects_class_result.png">
+<img src="https://github.com/datavizhokie/yolo-not-cat/blob/main/counter_objects_class_result.png" width=50% height=50%>
 
 It's surprising that the algorithm is 99% certain about the dining table but, could not assign a classification to the pair of glasses or the Bubly can. Even the bowl way in the background was detected.
