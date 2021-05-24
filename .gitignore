@@ -1,0 +1,9 @@
+.vscode/*
+.DS_Store
+*.ipynb
+.ipynb_checkpoints
+img/.DS_Store
+__pycache__/xgb.cpython-37.pyc
+images/*
+videos/*
+yolo-coco/*
