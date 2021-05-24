@@ -27,6 +27,8 @@ The framework works quite well in real-time on videos. For testing, a collage of
 
 <img src="https://github.com/datavizhokie/yolo-not-cat/blob/main/airport_video_class_capture.png" width=50% height=50%>
 
-### Leveraging Video Results
+![](airport.mov)
+
+### Leveraging Video Results Downstream
 
 #TODO
