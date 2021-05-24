@@ -2,7 +2,7 @@
 
 I think you must have been living under a rock to not know about the Lawyer on a Zoom call that couldn't turn off his Cat filter and declared...
 
-![not_a_cat](https://user-images.githubusercontent.com/20958260/119413718-70a19800-bcab-11eb-983d-5241ff63674a.jpeg width=50% height=50%)
+![not_a_cat](https://user-images.githubusercontent.com/20958260/119413718-70a19800-bcab-11eb-983d-5241ff63674a.jpeg)
 
 This repo Leverages YOLO image detection to classify objects in images and videos. "You only look once (YOLO) is a state-of-the-art, real-time object detection system."
 
