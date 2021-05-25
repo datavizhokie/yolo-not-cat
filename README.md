@@ -28,9 +28,7 @@ It's surprising that the algorithm is 99% certain about the dining table but, co
 
 ## Video Object Detection
 
-The video object framework works quite well in real-time on videos. For testing, a collage of airport footage was fed through. Below is a screenshot from the output video.
-
-<img src="https://github.com/datavizhokie/yolo-not-cat/blob/main/airport_video_class_capture.png" width=50% height=50%>
+The video object framework works quite well in real-time on videos. For testing, a collage of airport footage was fed through. Below is the classificatoin output:
 
 ![Alt Text](https://github.com/datavizhokie/yolo-not-cat/blob/main/airport.gif)
 
