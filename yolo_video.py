@@ -1,11 +1,11 @@
-
-
 import numpy as np
 import argparse
 import imutils
 import time
 import cv2
 import os
+import pandas as pd
+import sys
 
 # construct the argument parse and parse the arguments
 ap = argparse.ArgumentParser()
@@ -24,8 +24,11 @@ args = vars(ap.parse_args())
 # load the COCO class labels our YOLO model was trained on
 labelsPath = os.path.sep.join([args["yolo"], "coco.names"])
 LABELS = open(labelsPath).read().strip().split("\n")
-# initialize the list of labels observed
+
+# initialize lists for storing results
 labels_observed = []
+conf_observed = []
+classes = []
 
 # initialize a list of colors to represent each possible class label
 np.random.seed(42)
@@ -87,8 +90,7 @@ while True:
 	layerOutputs = net.forward(ln)
 	end = time.time()
 	
-    # initialize our lists of detected bounding boxes, confidences,
-	# and class IDs, respectively
+    # initialize our lists of detected bounding boxes, confidences, class IDs, frame
 	boxes = []
 	confidences = []
 	classIDs = []
@@ -145,9 +147,11 @@ while True:
 			cv2.rectangle(frame, (x, y), (x + w, y + h), color, 2)
 			text = "{}: {:.4f}".format(LABELS[classIDs[i]],
 				confidences[i])
-			#TODO write labels observed to a list
+			
+			# write labels, confidences, frame_starts to a list
 			labels_observed.append(LABELS[classIDs[i]])
-			### *** !
+			conf_observed.append(confidences[i])
+
 			cv2.putText(frame, text, (x, y - 5),
 				cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 2)
 
@@ -169,7 +173,11 @@ while True:
 	writer.write(frame)
 
 
-print("Labels observed in video: ", labels_observed)
+# convert lists into a dataframe
+results_dict = {'labels_observed':labels_observed,'conf_observed':conf_observed}
+results_df = pd.DataFrame(results_dict)
+
+results_df.to_csv("vid_label_results.csv", index=False)
 
 # release the file pointers
 print("[INFO] cleaning up...")

@@ -8,3 +8,6 @@ images/*
 videos/*
 yolo-coco/*
 output/*
+*.twbr
+*.twb
+*.csv

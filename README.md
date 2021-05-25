@@ -16,15 +16,15 @@ Photo object detection is quite effective. To execute the python script using sy
 
 Below is an initial image object detection using a photo of *my dogs*. The classifications are pretty *spot* on (no pun - by the way, their names are Moe and Bodie).
 
-<img src="https://github.com/datavizhokie/yolo-not-cat/blob/main/beagles_roof_class_result.png" width=50% height=50%>
+<img src="https://github.com/datavizhokie/yolo-not-cat/blob/main/readme_img/beagles_roof_class_result.png" width=50% height=50%>
 
 Let's take a look at another image, this one with more quite a few more obvious objects.
 
-<img src="https://github.com/datavizhokie/yolo-not-cat/blob/main/counter_objects_class_result.png" width=50% height=50%>
+<img src="https://github.com/datavizhokie/yolo-not-cat/blob/main/readme_img/counter_objects_class_result.png" width=50% height=50%>
 
 It's surprising that the algorithm is 99% certain about the dining table but, could not assign a classification to the pair of glasses, the pen, or the Bubly can. Even the bowl way in the background was detected. Lowering the confidence parameter down to 10% will pick up the can as a "cup", but still no detection on the pair of glasses or the pen.
 
-<img src="https://github.com/datavizhokie/yolo-not-cat/blob/main/counter_objects_class_results_lwr_conf.png" width=50% height=50%>
+<img src="https://github.com/datavizhokie/yolo-not-cat/blob/main/readme_img/counter_objects_class_results_lwr_conf.png" width=50% height=50%>
 
 ## Video Object Detection
 
@@ -34,4 +34,6 @@ The video object framework works quite well in real-time on videos. For testing,
 
 ## Leveraging Video Results Downstream
 
-#TODO
+The icing on the cake is extracting data from the frames for analysis. Below we can see number of frames for each object that was detected as well as confidence.
+
+<img src="https://github.com/datavizhokie/yolo-not-cat/blob/main/readme_img/object_results_viz.png" width=50% height=50%>
