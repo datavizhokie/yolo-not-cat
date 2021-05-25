@@ -24,6 +24,8 @@ args = vars(ap.parse_args())
 # load the COCO class labels our YOLO model was trained on
 labelsPath = os.path.sep.join([args["yolo"], "coco.names"])
 LABELS = open(labelsPath).read().strip().split("\n")
+# initialize the list of labels observed
+labels_observed = []
 
 # initialize a list of colors to represent each possible class label
 np.random.seed(42)
@@ -90,6 +92,7 @@ while True:
 	boxes = []
 	confidences = []
 	classIDs = []
+	
 
 	# loop over each of the layer outputs
 	for output in layerOutputs:
@@ -123,6 +126,7 @@ while True:
 				confidences.append(float(confidence))
 				classIDs.append(classID)
 
+
 	# apply non-maxima suppression to suppress weak, overlapping
 	# bounding boxes
 	idxs = cv2.dnn.NMSBoxes(boxes, confidences, args["confidence"],
@@ -141,6 +145,9 @@ while True:
 			cv2.rectangle(frame, (x, y), (x + w, y + h), color, 2)
 			text = "{}: {:.4f}".format(LABELS[classIDs[i]],
 				confidences[i])
+			#TODO write labels observed to a list
+			labels_observed.append(LABELS[classIDs[i]])
+			### *** !
 			cv2.putText(frame, text, (x, y - 5),
 				cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 2)
 
@@ -160,6 +167,9 @@ while True:
 	
     # write the output frame to disk
 	writer.write(frame)
+
+
+print("Labels observed in video: ", labels_observed)
 
 # release the file pointers
 print("[INFO] cleaning up...")
