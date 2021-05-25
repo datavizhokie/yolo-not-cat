@@ -32,6 +32,8 @@ The video object framework works quite well in real-time on videos. For testing,
 
 <img src="https://github.com/datavizhokie/yolo-not-cat/blob/main/airport_video_class_capture.png" width=50% height=50%>
 
+![Alt Text](https://github.com/datavizhokie/yolo-not-cat/blob/main/airport.gif)
+
 ## Leveraging Video Results Downstream
 
 #TODO
