@@ -30,10 +30,10 @@ It's surprising that the algorithm is 99% certain about the dining table but, co
 
 The video object framework works quite well in real-time on videos. For testing, a collage of airport footage was fed through. Below is the classificatoin output:
 
-![Alt Text](https://github.com/datavizhokie/yolo-not-cat/blob/main/airport.gif)
+![Alt Text](https://github.com/datavizhokie/yolo-not-cat/blob/main/readme_img/airport.gif)
 
 ## Leveraging Video Results Downstream
 
 The icing on the cake is extracting data from the frames for analysis. Below we can see number of frames for each object that was detected as well as confidence.
 
-<img src="https://github.com/datavizhokie/yolo-not-cat/blob/main/readme_img/object_results_viz.png" width=50% height=50%>
+<img src="https://github.com/datavizhokie/yolo-not-cat/blob/main/readme_img/object_results_viz.png" width=75% height=75%>
