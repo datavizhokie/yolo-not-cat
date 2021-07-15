@@ -4,7 +4,7 @@ I think you must have been living under a rock to not know about the Lawyer on a
 
 ![not_a_cat](https://user-images.githubusercontent.com/20958260/119413718-70a19800-bcab-11eb-983d-5241ff63674a.jpeg)
 
-This repo Leverages YOLO image detection to classify objects in images and videos. "You only look once (YOLO) is a state-of-the-art, real-time object detection system."
+This repo Leverages YOLOv3 image detection to classify objects in images and videos. "You only look once (YOLO) is a state-of-the-art, real-time object detection system."
 
 https://pjreddie.com/darknet/yolo/
 
@@ -22,13 +22,13 @@ Let's take a look at another image, this one with more quite a few more obvious 
 
 <img src="https://github.com/datavizhokie/yolo-not-cat/blob/main/readme_img/counter_objects_class_result.png" width=50% height=50%>
 
-It's surprising that the algorithm is 99% certain about the dining table but, could not assign a classification to the pair of glasses, the pen, or the Bubly can. Even the bowl way in the background was detected. Lowering the confidence parameter down to 10% will pick up the can as a "cup", but still no detection on the pair of glasses or the pen.
+The algorithm is 99% certain about the dining table but could not assign a classification to the pair of glasses, the pen, or the Bubly can (these three classes aren't included in the pre-trained COCO set). Even the bowl way in the background was detected. Lowering the confidence parameter down to 10% will pick up the can as a "cup".
 
 <img src="https://github.com/datavizhokie/yolo-not-cat/blob/main/readme_img/counter_objects_class_results_lwr_conf.png" width=50% height=50%>
 
 ## Video Object Detection
 
-The video object framework works quite well in real-time on videos. For testing, a collage of airport footage was fed through. Below is the classificatoin output:
+The video object framework works quite well in real-time on videos. For testing, a collage of airport footage was fed through. Below is the classification output:
 
 ![Alt Text](https://github.com/datavizhokie/yolo-not-cat/blob/main/readme_img/airport.gif)
 
